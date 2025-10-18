@@ -9,27 +9,48 @@ public class App {
     public static void main(String[] args) {
         List<Engine> engines = new ArrayList<Engine>();
         List<CarModel> modellen = List.of(
-                new CarModel("Cabrio", List.of(2, 4), "RWD", false, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("Coupe", List.of(2, 5), "RWD", false, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("FourByFour", List.of(5, 5), "4x4", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("Hatchback", List.of(4, 5), "FWD", false, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("MPV", List.of(5, 8), "FWD", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("PickUp", List.of(2, 3), "AWD", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("Sedan", List.of(2, 5), "RWD", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("Stationwagon", List.of(2, 5), "AWD", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("SUV", List.of(5, 7), "AWD", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline"))),
-                new CarModel("Ute", List.of(2, 3), "FWD", true, List.of(new BurnerEngine("Benzine", 2100, 4, 6, "Manual", "Natural", "Inline")
-                        , new BurnerEngine("Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")))
-        );
+    new CarModel("Cabrio", List.of(2, 4), "RWD", false, List.of(
+            new BurnerEngine(180, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(160, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("Coupe", List.of(2, 5), "RWD", false, List.of(
+            new BurnerEngine(190, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(170, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("FourByFour", List.of(5, 5), "4x4", true, List.of(
+            new BurnerEngine(200, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(180, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("Hatchback", List.of(4, 5), "FWD", false, List.of(
+            new BurnerEngine(150, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(130, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("MPV", List.of(5, 8), "FWD", true, List.of(
+            new BurnerEngine(160, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(140, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("PickUp", List.of(2, 3), "AWD", true, List.of(
+            new BurnerEngine(210, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(190, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("Sedan", List.of(2, 5), "RWD", true, List.of(
+            new BurnerEngine(170, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(150, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("Stationwagon", List.of(2, 5), "AWD", true, List.of(
+            new BurnerEngine(175, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(155, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("SUV", List.of(5, 7), "AWD", true, List.of(
+            new BurnerEngine(220, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(200, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    )),
+    new CarModel("Ute", List.of(2, 3), "FWD", true, List.of(
+            new BurnerEngine(180, "Benzine", 2100, 4, 6, "Manual", "Natural", "Inline"),
+            new BurnerEngine(160, "Diesel", 1900, 4, 5, "Manual", "Turbo", "Inline")
+    ))
+);
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wat voor auto wilt u hebben? U heeft keuze uit te volgende soorten: ");
@@ -69,5 +90,12 @@ public class App {
         }
 
 
+
+        // test
+        Engine e1 = new BurnerEngine(150, "Benzine", 1998, 4, 6, "Handmatig", "Turbo", "I4");
+        e1.start();
+
+        Engine e2 = new ElectricEngine(200, 75);
+        e2.start();
     }
 }
