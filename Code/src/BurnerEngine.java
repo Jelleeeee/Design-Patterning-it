@@ -1,11 +1,11 @@
 public class BurnerEngine extends Engine{
-    String fuel;
-    int EngineCapacity;
-    int Cilinders;
-    int gears;
-    String transmission;
-    String Aspiration;
-    String MotorType;
+    public String fuel;
+    public int EngineCapacity;
+    public int Cilinders;
+    public int gears;
+    public String transmission;
+    public String Aspiration;
+    public String MotorType;
 
     public BurnerEngine(int power, String Fuel, int EngineCapacity, int Cilinders, int gears, String transmission, String Aspiration, String MotorType)
     {   
@@ -17,6 +17,10 @@ public class BurnerEngine extends Engine{
         this.transmission = transmission;
         this.Aspiration = Aspiration;
         this.MotorType = MotorType;
+    }
+
+    public String printEngine(){
+        return "Een " + this.EngineCapacity +  "cc " + this.Aspiration + " " + this.MotorType + " " + this.Cilinders + " met een " + this.transmission + " tranmissie, met " + this.gears +  " versnellingen met " +  this.fuel + " brandstof \n";
     }
 
     @Override

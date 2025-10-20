@@ -19,6 +19,12 @@ public class CarModel {
     public List<Integer> getMogelijkeZitplaatsen() { return mogelijkeZitplaatsen; }
     public String getAandrijving() { return aandrijving; }
     public boolean heeftTrekhaak() { return trekhaak; }
-    public List<Engine> getMogelijkeMotoren() { return mogelijkeMotoren; }
+    public String getMogelijkeMotoren() {
+        String info = " ";
+        for (Engine engine : mogelijkeMotoren) {
+            info += engine.printEngine();
+        }
+        return info;
+    }
     public Engine getKeuzeMotor(int keuze) { return mogelijkeMotoren.get(keuze); }
 }
