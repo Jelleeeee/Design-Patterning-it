@@ -4,10 +4,11 @@ public abstract class Car {
     boolean trekhaak;
     int zitplaatsen;
     Engine engine;
+    Systems system;
 
     public static class Cabrio extends Car{
         String dakMateriaal;
-        public Cabrio(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, String dakMateriaal, Engine engine) {
+        public Cabrio(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, String dakMateriaal, Engine engine, Systems system) {
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -18,7 +19,7 @@ public abstract class Car {
     }
 
     public static class FourByFour extends Car{
-        public FourByFour(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public FourByFour(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -28,7 +29,7 @@ public abstract class Car {
     }
 
     public static class Coupe extends Car{
-        public Coupe(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public Coupe(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -38,7 +39,7 @@ public abstract class Car {
     }
 
     public static class MPV extends Car{
-        public MPV(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public MPV(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -48,7 +49,7 @@ public abstract class Car {
     }
 
     public static class Hatchback extends Car{
-        public Hatchback(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public Hatchback(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -58,7 +59,7 @@ public abstract class Car {
     }
 
     public static class PickUp extends Car{
-        public PickUp(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public PickUp(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -68,7 +69,7 @@ public abstract class Car {
     }
 
     public static class Sedan extends Car{
-        public Sedan(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public Sedan(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -78,7 +79,7 @@ public abstract class Car {
     }
 
     public static class SUV extends Car{
-        public SUV(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public SUV(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -88,7 +89,7 @@ public abstract class Car {
     }
 
     public static class Ute extends Car{
-        public Ute(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public Ute(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;
@@ -98,7 +99,7 @@ public abstract class Car {
     }
 
     public static class Stationwagon extends Car{
-        public Stationwagon(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine){
+        public Stationwagon(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system){
             this.wielen = wielen;
             this.aandrijving = aandrijving;
             this.trekhaak = trekhaak;

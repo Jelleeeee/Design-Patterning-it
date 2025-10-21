@@ -20,7 +20,7 @@ public class BurnerEngine extends Engine{
     }
 
     public String printEngine(){
-        return "Een " + this.EngineCapacity +  "cc " + this.Aspiration + " " + this.MotorType + " " + this.Cilinders + " met een " + this.transmission + " tranmissie, met " + this.gears +  " versnellingen met " +  this.fuel + " brandstof \n";
+        return "een " + this.EngineCapacity +  "cc " + this.Aspiration + " " + this.MotorType + " " + this.Cilinders + " met een " + this.transmission + " tranmissie, met " + this.gears +  " versnellingen met " +  this.fuel + " brandstof \n";
     }
 
     @Override

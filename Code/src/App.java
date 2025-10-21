@@ -3,6 +3,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
@@ -77,16 +78,33 @@ public class App {
         System.out.println("Dit zijn de motorkeuzes hierbij: Welke wilt u hebben? (kies het bijbehorende getal)");
         System.out.println(modellen.get(keuze).getMogelijkeMotoren());
         int motorKeuze = scanner.nextInt() - 1;
-
+        boolean[] pepe = new boolean[9];
+        Systems test = new Systems(pepe);
         System.out.println("Welke Systemen wilt u geintegreerd hebben? U heeft keuze uit: ");
+        System.out.println(test.printSystems());
 
-        int systeemkeuzes = scanner.nextInt() - 1;
-//        String systemen = scanner.nextLine();
-//        //TODO aanpassen welke systemen er meegenomen moeten worden
+        String temp = " ";
+        int[] systeemkeuzes = new int[9];
+        int loop = 0;
+        do {
+            temp = scanner.nextLine();
+            try{
+                systeemkeuzes[loop] = Integer.parseInt(temp);
+            } catch(NumberFormatException _){loop--;}
+            loop++;
+        } while(!(Objects.equals(temp, "stop")));
+
+        boolean[] systemen = new boolean[9];
+        for (int i = 0; i < loop; i++) {
+            systemen[systeemkeuzes[i] - 1] = true;
+        }
+        Systems system = new Systems(systemen);
+        System.out.println(system.printGekozenSystemen());
+
 //        System.out.println("Wilt u nog accessoires hebben? ");//TODO keuzes uitprinten, met een ja of nee keuze, en zo ja welke dingen
 //        String accessoires = scanner.nextLine();
 
-        Car auto = CarFactory.createCar(4, modellen.get(keuze).getNaam(), modellen.get(keuze).getAandrijving(), modellen.get(keuze).heeftTrekhaak(), aantalZitplaatsen, modellen.get(keuze).getKeuzeMotor(motorKeuze));
+        Car auto = CarFactory.createCar(4, modellen.get(keuze).getNaam(), modellen.get(keuze).getAandrijving(), modellen.get(keuze).heeftTrekhaak(), aantalZitplaatsen, modellen.get(keuze).getKeuzeMotor(motorKeuze), system);
         if (auto != null) {
             System.out.print("U kiest dus een: " + auto.getClass().getSimpleName() + "! Deze heeft dus: \n" + auto.zitplaatsen + " zitplaatsen, en " + auto.aandrijving + " aandrijving en heeft ");
             if(auto.trekhaak){
