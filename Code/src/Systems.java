@@ -39,20 +39,20 @@ public class Systems {
             gekozen += " ISA";
         }
         if (laneAssist) {
-            gekozen += " LaneAssist\n";
+            gekozen += " LaneAssist";
         }
         if (startStop) {
-            gekozen += " StartStop\n";
+            gekozen += " StartStop";
         }
         if (cruiseControl) {
-            gekozen += " CruiseControl\n";
+            gekozen += " CruiseControl";
         }
         if (ACC) {
-            gekozen += " ACC\n";
+            gekozen += " ACC";
         }
         if (AEB) {
-            gekozen += " AEB\n";
+            gekozen += " AEB";
         }
-        return gekozen;
+        return gekozen + "\n";
     }
 }

@@ -1,16 +1,13 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
         List<Engine> engines = new ArrayList<Engine>();
         List<CarModel> modellen = List.of(
-    new CarModel("Cabrio", List.of(2, 4), "RWD", false, List.of(
+    new CarModel("Cabrio", List.of(2, 5), "RWD", false, List.of(
             new BurnerEngine(180, "Benzine", 2100, 4, 6, "automatische", "atmosferisch aangezogen", "Inline"),
             new BurnerEngine(160, "Diesel", 1900, 4, 5, "handgeschakeld", "turbocharged", "Inline")
     )),
@@ -86,7 +83,7 @@ public class App {
         String temp = " ";
         int[] systeemkeuzes = new int[9];
         int loop = 0;
-        do {
+        do{
             temp = scanner.nextLine();
             try{
                 systeemkeuzes[loop] = Integer.parseInt(temp);
@@ -101,10 +98,29 @@ public class App {
         Systems system = new Systems(systemen);
         System.out.println(system.printGekozenSystemen());
 
-//        System.out.println("Wilt u nog accessoires hebben? ");//TODO keuzes uitprinten, met een ja of nee keuze, en zo ja welke dingen
-//        String accessoires = scanner.nextLine();
+        boolean[] ac = new boolean[8];
+        Accesories Accessoirestest = new Accesories(ac);
+        System.out.println("Welke accessoires wilt u hebben? U heeft keuze uit: ");
+        System.out.println(Accessoirestest.printAccesories());
+        loop = 0;
+        int[] Accesoirekeuzes = new int[8];
+        do{
+            temp = scanner.nextLine();
+            try{
+                Accesoirekeuzes[loop] = Integer.parseInt(temp);
+            } catch(NumberFormatException _){loop--;}
+            loop++;
+        } while(!(Objects.equals(temp, "stop")));
 
-        Car auto = CarFactory.createCar(4, modellen.get(keuze).getNaam(), modellen.get(keuze).getAandrijving(), modellen.get(keuze).heeftTrekhaak(), aantalZitplaatsen, modellen.get(keuze).getKeuzeMotor(motorKeuze), system);
+        boolean[] accesoires = new boolean[8];
+        for (int i = 0; i < loop; i++) {
+            accesoires[Accesoirekeuzes[i] - 1] = true;
+        }
+
+        Accesories accesories = new Accesories(accesoires);
+        System.out.println(accesories.print());
+
+        Car auto = CarFactory.createCar(4, modellen.get(keuze).getNaam(), modellen.get(keuze).getAandrijving(), modellen.get(keuze).heeftTrekhaak(), aantalZitplaatsen, modellen.get(keuze).getKeuzeMotor(motorKeuze), system, accesories);
         if (auto != null) {
             System.out.print("U kiest dus een: " + auto.getClass().getSimpleName() + "! Deze heeft dus: \n" + auto.zitplaatsen + " zitplaatsen, en " + auto.aandrijving + " aandrijving en heeft ");
             if(auto.trekhaak){
