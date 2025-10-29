@@ -40,6 +40,4 @@ public class Client {
     public CarType getChosenCarType() {
         return chosenCarType;
     }
-
-
 }

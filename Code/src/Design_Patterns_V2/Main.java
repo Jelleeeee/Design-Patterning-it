@@ -18,6 +18,7 @@ public class Main {
             case Cabrio -> new Cabrio(4, "RWD", true, 5, (new CombustionEngine()));
             case Suv -> new SUV(4, "RWD", true, 5, (new ElectricEngine()));
             case FourbyFour -> new FourByFour(4, "RWD", true, 5, (new CombustionEngine()));
+            case Sedan -> new Sedan(4, "RWD", true, 5, (new CombustionEngine()));
         };
         dealership.sellCar(car);
     }

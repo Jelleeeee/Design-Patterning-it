@@ -47,3 +47,10 @@ public abstract class Car {
         }
     }
 
+    class Sedan extends Car {
+        public Sedan(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen,
+                   Engine engine) {
+            super(wielen, aandrijving, trekhaak, zitplaatsen, engine);
+        }
+    }
+
