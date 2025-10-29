@@ -1,3 +1,7 @@
+package Design_Patterns_V1;
+
+import Design_Patterns_V1.Accesories;
+
 public abstract class Car {
 
     // 🧱 Gemeenschappelijke velden
@@ -8,6 +12,16 @@ public abstract class Car {
     protected final Engine engine;
     protected final Systems system;
     protected final Accesories accesories;
+
+    public Car(){
+        wielen = 0;
+        aandrijving = "";
+        trekhaak = false;
+        zitplaatsen = 0;
+        engine = null;
+        system = null;
+        accesories = null;
+    }
 
     public Car(int wielen, String aandrijving, boolean trekhaak, int zitplaatsen,
                   Engine engine, Systems system, Accesories accesories) {

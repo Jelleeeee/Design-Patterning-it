@@ -1,3 +1,7 @@
+package Design_Patterns_V1;
+
+import Design_Patterns_V1.Accesories;
+
 public class CarFactory extends Car{
     public static Car createCar(int wielen, String type, String aandrijving, boolean trekhaak, int zitplaatsen, Engine engine, Systems system, Accesories accesories) {
         return switch (type.toLowerCase()) {

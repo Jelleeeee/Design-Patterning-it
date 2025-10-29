@@ -1,3 +1,5 @@
+package Design_Patterns_V1;
+
 public class ElectricEngine extends Engine{
     public int BatteryContent;
 

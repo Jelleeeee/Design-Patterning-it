@@ -1,5 +1,6 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+package Design_Patterns_V1;
+
+import Design_Patterns_V1.Accesories;
 
 import java.util.*;
 

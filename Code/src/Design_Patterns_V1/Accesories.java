@@ -1,3 +1,5 @@
+package Design_Patterns_V1;
+
 public class Accesories {
     public boolean spoiler;
     public boolean rims;
