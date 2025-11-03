@@ -24,6 +24,9 @@ public abstract class Car {
         this.zitplaatsen = zitplaatsen;
         this.engine = engine;
     }
+    public String print() {
+        return " " + this.aandrijving + ", " + wielen + " wielen en " + zitplaatsen + " zitplaatsen met een " + engine.print() + "\n";
+    }
 }
 
     class Cabrio extends Car {

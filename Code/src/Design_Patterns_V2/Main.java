@@ -7,19 +7,16 @@ public class Main {
         Dealership dealership = new Dealership();
         Client client = new Client(new Website());
 
-        System.out.print("Welcome to our Autistic car dealership. ");
+        System.out.println("Welcome to the Autistic Car Dealership!");
 
-        client.chooseCar();
+        // 1️⃣ Klant kiest en configureert auto
+        Car configuredCar = client.configureCar();
 
-        CarType type = client.getChosenCarType();
+        // 2️⃣ Dealer krijgt de communicatiestrategie van de klant
         dealership.setStrategy(client.getSellCommunication());
 
-        Car car = switch (type) {
-            case Cabrio -> new Cabrio(4, "RWD", true, 5, (new CombustionEngine()));
-            case Suv -> new SUV(4, "RWD", true, 5, (new ElectricEngine()));
-            case FourbyFour -> new FourByFour(4, "RWD", true, 5, (new CombustionEngine()));
-            case Sedan -> new Sedan(4, "RWD", true, 5, (new CombustionEngine()));
-        };
-        dealership.sellCar(car);
+        // 3️⃣ Verkoop de uiteindelijke auto
+        dealership.sellCar(configuredCar);
     }
 }
+
