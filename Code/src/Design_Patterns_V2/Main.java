@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Dealership dealership = new Dealership();
+        Dealership dealership = new Dealership(new Physical());
         Client client = new Client(new Website());
 
         System.out.println("Welcome to the Autistic Car Dealership!");
 
-        // 1️⃣ Klant kiest en configureert auto
-        Car configuredCar = client.configureCar();
-
-        // 2️⃣ Dealer krijgt de communicatiestrategie van de klant
+        //  Klant geeft aan welke communicatiemethode er gebruikt word
         dealership.setStrategy(client.getSellCommunication());
 
-        // 3️⃣ Verkoop de uiteindelijke auto
+        //  Klant kiest en configureert auto
+        Car configuredCar = client.configureCar();
+
+        //  Verkoop de uiteindelijke auto
         dealership.sellCar(configuredCar);
     }
 }

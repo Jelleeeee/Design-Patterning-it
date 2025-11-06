@@ -22,7 +22,7 @@ class CombustionEngine extends Engine {
         System.out.println("Combustion Engine started");
     }
     public String print(){
-        return "combustion engine: " + this.engineSize + " cc " + this.configuration + this.cilinders + " " + this.power + " pk";
+        return "combustion engine: " + this.engineSize + "cc " + this.configuration + this.cilinders + " met " + this.power + " pk";
     }
 }
 
@@ -35,6 +35,6 @@ class CombustionEngine extends Engine {
         System.out.println("Electric Engine started");
     }
     public String print(){
-        return "Electric Engine " + this.power;
+        return "Electric Engine" + " met " + this.power + " pk";
     }
 }

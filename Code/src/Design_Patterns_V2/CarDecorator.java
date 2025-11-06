@@ -24,9 +24,9 @@ class SportDecorator extends CarDecorator {
         return decoratedCar.print() + " and the Sport Package";
     }
 }
-
+    
 class WrapDecorator extends CarDecorator {
-    String color;
+    public String color;
     public WrapDecorator(Car decoratedCar, String color) {
         super(decoratedCar);
         this.color = color;

@@ -2,7 +2,8 @@ package Design_Patterns_V2;
 
 class Dealership {
     private SellCommunication strategy;
-    public Dealership() {
+    public Dealership(SellCommunication strategy) {
+        this.strategy = strategy;
     }
     public void setStrategy(SellCommunication strategy) {
         this.strategy = strategy;
